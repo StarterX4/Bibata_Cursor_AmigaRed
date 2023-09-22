@@ -12,12 +12,10 @@ if ! type -p ctgen >/dev/null; then
 fi
 
 declare -A names
-names["Bibata-Modern-Amber"]="Yellowish and rounded edge Bibata cursors."
-names["Bibata-Modern-Classic"]="Black and rounded edge Bibata cursors."
-names["Bibata-Modern-Ice"]="White and rounded edge Bibata cursors."
-names["Bibata-Original-Amber"]="Yellowish and sharp edge Bibata cursors."
-names["Bibata-Original-Classic"]="Black and sharp edge Bibata cursors."
-names["Bibata-Original-Ice"]="White and sharp edge Bibata cursors."
+names["Bibata-Modern-AmigaRed"]="Red and rounded edge Bibata cursors."
+names["Bibata-Modern-AmigaFullRed"]="Red and rounded edge Bibata cursors (red hands)."
+names["Bibata-Original-AmigaRed"]="Red and sharp edge Bibata cursors."
+names["Bibata-Original-AmigaFullRed"]="Red and sharp edge Bibata cursors (red hands)."
 
 # Cleanup old builds
 rm -rf themes bin
@@ -51,7 +49,7 @@ for key in "${!names[@]}"; do
   wait $PID
 done
 
-tar -cJvf "../bin/Bibata.tar.xz" --exclude="*-Windows" . &
+tar -cJvf "../bin/Bibata-AmigaRed.tar.xz" --exclude="*-Windows" . &
 PID=$!
 wait $PID
 
